@@ -1,15 +1,27 @@
 {
   "name": "jpush-json-payload",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "jpush 极光推送",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "lint": "eslint src/*",
     "build": "rm -rf ./dist && tsc"
   },
   "keywords": ["jpush", "极光推送"],
-  "author": "",
-  "license": "ISC",
+  "author": {
+    "name": "Larry",
+    "email": "larryteal@163.com"
+  },
+   "bugs": {
+    "url": "https://github.com/larryteal/jpush-json-payload.git/issues"
+  },
+  "homepage": "https://github.com/larryteal/jpush-json-payload.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/larryteal/jpush-json-payload.git"
+  },
+  "license": "MIT",
   "dependencies": {
     "axios": "^0.21.4"
   },
