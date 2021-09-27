@@ -14,32 +14,32 @@ npm i jpush-json-payload
 ```js
 import { JPushClient, JPushClientConfig, JPushPayload } from 'jpush-json-payload';
 
-(async () => {
-  const clientConfig:JPushClientConfig = {
-    auth: {
-      username: 'appKey',
-      password: 'masterSecret',
-    },
-  };
+const clientConfig: JPushClientConfig = {
+  auth: {
+    username: 'appKey',
+    password: 'masterSecret',
+  },
+};
 
-  const client = new JPushClient(clientConfig);
-  const payload: JPushPayload = {
-    platform: 'all',
-    audience: 'all',
-    notification: {
-      alert: 'Hi, JPush!',
-    },
-  };
-  return client.push(payload);
-})()
-  .then((response) => {
+const client = new JPushClient(clientConfig);
+
+const payload: JPushPayload = {
+  platform: 'all',
+  audience: 'all',
+  notification: {
+    alert: 'Hello',
+  },
+};
+
+async function main() {
+  try {
+    const response = await client.validate(payload);
     console.log(response.data);
     console.log(response.status);
     console.log(response.statusText);
     console.log(response.headers);
     console.log(response.config);
-  })
-  .catch((error) => {
+  } catch (error: any) {
     if (error.response) {
       // The request was made and the server responded with a status code
       // that falls out of the range of 2xx
@@ -56,10 +56,12 @@ import { JPushClient, JPushClientConfig, JPushPayload } from 'jpush-json-payload
       console.log('Error', error.message);
     }
     console.log(error.config);
+  }
+}
+
+main()
+  .finally(() => {
+    console.log('done');
   });
 
 ```
-
-
-##  
-
