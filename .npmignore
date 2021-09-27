@@ -1,0 +1,9 @@
+*.png
+src/
+.editorconfig
+.eslintrc.json
+.gitignore
+.prettierrc
+.npmignore
+package-lock.json
+tsconfig.json
