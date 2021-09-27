@@ -1,7 +1,7 @@
 {
   "name": "jpush-json-payload",
-  "version": "1.0.0",
-  "description": "jpush 极光推送",
+  "version": "1.0.1",
+  "description": "jpush 极光推送 TypeScript",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
